@@ -1,3 +1,95 @@
-h1 {
-  color: orange;
+.navbar-default .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand img {
+  width: 200px;
+  height: 100px;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+  margin-left: -50px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  background-color: white;
+}
+
+#home-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-image {
+  position: relative;
+}
+
+#home-image-text {
+  position: absolute;
+  color: white;
+}
+
+.home-image-text-hr {
+  margin-top: -15px;
+  width: 400px;
+}
+
+.home-image-text-name-container {
+  display: flex;
+  justify-content: center;
+}
+
+.home-image-text-position-container {
+  display: flex;
+  justify-content: center;
+} 
+
+.blurb-text-container {
+  font-size: 40px;
+  margin-top: 50px;
+  margin-left: 100px; 
+}
+
+.content-drop {
+  margin-top: 50px;
+}
+
+.text {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-image-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 400px;
+}
+
+.parallax {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
+  width: 500px;
+}
+
+.background-container {
+  display: flex;
+  align-content: center;
+}
+
+.parallax-image {
+  position: relative;
+  height: 500px;
+  width: 500px;
+}
+
+.parallax-image-text {
+  position: relative;
 }
