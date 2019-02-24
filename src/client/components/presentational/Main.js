@@ -5,13 +5,18 @@ import Home from "../container/Home";
 import Questions from "./Questions";
 import About from "./About";
 
-const Main = () => {
+const Main = props => {
   return (
     <div>
       <Switch>
-        <Home exact path="/" component={Home} />
-        <Questions path="/questions" component={Questions} />
-        <About path="/about" component={About} />
+        <Route exact path="/" component={Home} />
+        <Route
+          path="/questions"
+          render={routeProps => (
+            <Questions {...routeProps} questions={props.questions} />
+          )}
+        />
+        <Route path="/about" component={About} />
       </Switch>
     </div>
   );

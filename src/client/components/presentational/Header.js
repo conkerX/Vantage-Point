@@ -4,9 +4,16 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header-fixed">
-      <div className="header-container">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+      <div className="header-title-container">
+        <h1>Growth Gauge</h1>
+      </div>
+      <div className="header-link-container">
+        <Link className="nav-link" to="/">
+          Home
+        </Link>
+        <Link className="nav-link" to="/about">
+          About
+        </Link>
       </div>
     </div>
   );

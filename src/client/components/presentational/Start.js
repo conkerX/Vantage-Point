@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const Start = () => {
   return (
     <div className="start-container">
-      <h1 className="start-title">Growth Gauge</h1>
       <div className="start-text-container">
         <h5 className="left-text-header">
           <span className="left-text-header-underline">START</span>

@@ -1,8 +1,10 @@
 import React from "react";
 
-const Questions = () => {
+const Questions = props => {
+  console.log("props -->", props);
+
   return (
-    <div>
+    <div className="questions-container">
       <h1>Questions Page</h1>
     </div>
   );
