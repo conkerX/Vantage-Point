@@ -1,2 +1,1 @@
-# PeanutButterValley
-Website for a friend
+# Growth Gauge
