@@ -1,19 +1,20 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-import Home from '../presentational/Home';
-import Stories from '../presentational/Stories';
-import Resume from '../presentational/Resume';
-
+import Home from "../container/Home";
+import Questions from "./Questions";
+import About from "./About";
 
 const Main = () => {
   return (
-    <Switch>
-      <Route exact path='/' component={Home} />
-      <Route path='/stories' component={Stories} />
-      <Route path='/resume' component={Resume} />
-    </Switch>
-  )
-}
+    <div>
+      <Switch>
+        <Home exact path="/" component={Home} />
+        <Questions path="/questions" component={Questions} />
+        <About path="/about" component={About} />
+      </Switch>
+    </div>
+  );
+};
 
 export default Main;
