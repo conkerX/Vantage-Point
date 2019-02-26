@@ -13,7 +13,13 @@ const Main = props => {
         <Route
           path="/questions"
           render={routeProps => (
-            <Questions {...routeProps} questions={props.questions} />
+            <Questions
+              {...routeProps}
+              pointer={props.pointer}
+              questions={props.questions}
+              nextQuestion={props.nextQuestion}
+              backQuestion={props.backQuestion}
+            />
           )}
         />
         <Route path="/about" component={About} />
