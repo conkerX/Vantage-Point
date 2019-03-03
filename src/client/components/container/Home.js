@@ -6,8 +6,16 @@ import Header from "../presentational/Header";
 import Login from "../presentational/Login";
 
 class Home extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.props.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.props.handleScroll);
   }
 
   render() {

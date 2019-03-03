@@ -15,24 +15,60 @@ class App extends Component {
       questions: [
         {
           question: "This is question 1.",
-          whereIam: 0,
-          whereIThinkIAmGoing: 0,
-          whereIThoughtIWasGoingToBe: 0,
-          whereIAmHeading: 0
+          whereIam: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          },
+          whereIThinkIAmGoing: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          },
+          whereIThoughtIWasGoingToBe: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          },
+          whereIAmHeading: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          }
         },
         {
           question: "This is question 2.",
-          whereIam: 0,
-          whereIThinkIAmGoing: 0,
-          whereIThoughtIWasGoingToBe: 0,
-          whereIAmHeading: 0
+          whereIam: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          },
+          whereIThinkIAmGoing: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          },
+          whereIThoughtIWasGoingToBe: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          },
+          whereIAmHeading: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          }
         },
         {
           question: "This is question 3.",
-          whereIam: 0,
-          whereIThinkIAmGoing: 0,
-          whereIThoughtIWasGoingToBe: 0,
-          whereIAmHeading: 0
+          whereIam: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          },
+          whereIThinkIAmGoing: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          },
+          whereIThoughtIWasGoingToBe: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          },
+          whereIAmHeading: {
+            scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            answer: 0
+          }
         }
       ]
     };
@@ -43,9 +79,11 @@ class App extends Component {
   }
 
   handleScroll(event) {
+    console.log("scroll -->", window.ScrollY);
+
     if (window.scrollY) {
       this.setState({
-        scrolling: true
+        scrolling: !this.state.scrolling
       });
     }
   }
@@ -84,6 +122,7 @@ class App extends Component {
           scrolling={this.state.scrolling}
         />
         <Main
+          handleScroll={this.handleScroll}
           pointer={this.state.pointer}
           questions={this.state.questions}
           nextQuestion={this.nextQuestion}

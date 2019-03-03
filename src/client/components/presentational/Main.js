@@ -9,7 +9,13 @@ const Main = props => {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route
+          exact
+          path="/"
+          render={routeProps => (
+            <Home {...routeProps} handleScroll={props.handleScroll} />
+          )}
+        />
         <Route
           path="/questions"
           render={routeProps => (

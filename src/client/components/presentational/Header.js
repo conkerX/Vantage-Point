@@ -6,13 +6,13 @@ class Header extends Component {
     super(props);
   }
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.props.handleScroll);
-  }
+  // componentDidMount() {
+  //   window.addEventListener("scroll", this.props.handleScroll);
+  // }
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.props.handleScroll);
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener("scroll", this.props.handleScroll);
+  // }
 
   render() {
     return (

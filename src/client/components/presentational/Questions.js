@@ -14,13 +14,43 @@ const Questions = ({ pointer, questions, nextQuestion, backQuestion }) => {
       <div className="questions-question-container">
         <div>{questions[pointer].question}</div>
 
-        <div>Where I am</div>
+        <div>
+          <h3>Where I am</h3>
+          <div className="scale-container">
+            {questions[pointer].whereIam.scale.map(num => (
+              <div className="scale" key={num}>
+                {num}
+              </div>
+            ))}
+          </div>
 
-        <div>Where I think I am going</div>
+          <h3>Where I think I am going</h3>
+          <div className="scale-container">
+            {questions[pointer].whereIThinkIAmGoing.scale.map(num => (
+              <div className="scale" key={num}>
+                {num}
+              </div>
+            ))}
+          </div>
 
-        <div>Where I thought I was going to be</div>
+          <h3>Where I thought I was going to be</h3>
+          <div className="scale-container">
+            {questions[pointer].whereIThoughtIWasGoingToBe.scale.map(num => (
+              <div className="scale" key={num}>
+                {num}
+              </div>
+            ))}
+          </div>
 
-        <div>Where I am heading</div>
+          <h3>Where I am heading</h3>
+          <div className="scale-container">
+            {questions[pointer].whereIAmHeading.scale.map(num => (
+              <div className="scale" key={num}>
+                {num}
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div>
           {pointer !== 0 ? <button onClick={backQuestion}>Back</button> : null}
