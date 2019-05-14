@@ -1,6 +1,14 @@
 import React from "react";
 
-const Questions = ({ pointer, questions, nextQuestion, backQuestion }) => {
+const Questions = ({
+  pointer,
+  questions,
+  scaleMouseEnter,
+  scaleMouseLeave,
+  handleScaleClick,
+  nextQuestion,
+  backQuestion
+}) => {
   console.log("pointer -->", pointer);
   console.log("questions -->", questions);
 
@@ -17,8 +25,15 @@ const Questions = ({ pointer, questions, nextQuestion, backQuestion }) => {
         <div>
           <h3>Where I am</h3>
           <div className="scale-container">
-            {questions[pointer].whereIam.scale.map(num => (
-              <div className="scale" key={num}>
+            {questions[pointer].whereIAm.scale.map(num => (
+              <div
+                onMouseEnter={scaleMouseEnter}
+                onMouseLeave={scaleMouseLeave}
+                onClick={handleScaleClick}
+                data-answer="whereIAm"
+                className="scale"
+                key={num}
+              >
                 {num}
               </div>
             ))}
@@ -27,7 +42,14 @@ const Questions = ({ pointer, questions, nextQuestion, backQuestion }) => {
           <h3>Where I think I am going</h3>
           <div className="scale-container">
             {questions[pointer].whereIThinkIAmGoing.scale.map(num => (
-              <div className="scale" key={num}>
+              <div
+                onMouseEnter={scaleMouseEnter}
+                onMouseLeave={scaleMouseLeave}
+                onClick={handleScaleClick}
+                data-answer="whereIThinkIAmGoing"
+                className="scale"
+                key={num}
+              >
                 {num}
               </div>
             ))}
@@ -36,7 +58,14 @@ const Questions = ({ pointer, questions, nextQuestion, backQuestion }) => {
           <h3>Where I thought I was going to be</h3>
           <div className="scale-container">
             {questions[pointer].whereIThoughtIWasGoingToBe.scale.map(num => (
-              <div className="scale" key={num}>
+              <div
+                onMouseEnter={scaleMouseEnter}
+                onMouseLeave={scaleMouseLeave}
+                onClick={handleScaleClick}
+                data-answer="whereIThoughtIWasGoingToBe"
+                className="scale"
+                key={num}
+              >
                 {num}
               </div>
             ))}
@@ -45,7 +74,14 @@ const Questions = ({ pointer, questions, nextQuestion, backQuestion }) => {
           <h3>Where I am heading</h3>
           <div className="scale-container">
             {questions[pointer].whereIAmHeading.scale.map(num => (
-              <div className="scale" key={num}>
+              <div
+                onMouseEnter={scaleMouseEnter}
+                onMouseLeave={scaleMouseLeave}
+                onClick={handleScaleClick}
+                data-answer="whereIAmHeading"
+                className="scale"
+                key={num}
+              >
                 {num}
               </div>
             ))}

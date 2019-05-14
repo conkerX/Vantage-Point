@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import Start from "../presentational/Start";
 import Header from "../presentational/Header";
 import Login from "../presentational/Login";
+import Planner from "../presentational/Planner";
 
 class Home extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class Home extends Component {
           <div className="right-side-container">
             <div className="grid-container">
               <Login />
-              <Login />
+              <Planner />
               <Login />
               <Login />
             </div>

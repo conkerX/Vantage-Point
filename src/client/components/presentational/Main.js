@@ -23,6 +23,9 @@ const Main = props => {
               {...routeProps}
               pointer={props.pointer}
               questions={props.questions}
+              scaleMouseEnter={props.scaleMouseEnter}
+              scaleMouseLeave={props.scaleMouseLeave}
+              handleScaleClick={props.handleScaleClick}
               nextQuestion={props.nextQuestion}
               backQuestion={props.backQuestion}
             />

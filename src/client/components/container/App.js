@@ -9,13 +9,17 @@ import "../../app.css";
 class App extends Component {
   constructor() {
     super();
+
+    // change scale to hold objects to allow for better css control
+    // ex: { val: 7, isSelected: false }
+
     this.state = {
       scrolling: false,
       pointer: 0,
       questions: [
         {
           question: "This is question 1.",
-          whereIam: {
+          whereIAm: {
             scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
             answer: 0
           },
@@ -34,7 +38,7 @@ class App extends Component {
         },
         {
           question: "This is question 2.",
-          whereIam: {
+          whereIAm: {
             scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
             answer: 0
           },
@@ -53,7 +57,7 @@ class App extends Component {
         },
         {
           question: "This is question 3.",
-          whereIam: {
+          whereIAm: {
             scale: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
             answer: 0
           },
@@ -74,6 +78,9 @@ class App extends Component {
     };
 
     this.handleScroll = this.handleScroll.bind(this);
+    this.scaleMouseEnter = this.scaleMouseEnter.bind(this);
+    this.scaleMouseLeave = this.scaleMouseLeave.bind(this);
+    this.handleScaleClick = this.handleScaleClick.bind(this);
     this.nextQuestion = this.nextQuestion.bind(this);
     this.backQuestion = this.backQuestion.bind(this);
   }
@@ -86,6 +93,30 @@ class App extends Component {
         scrolling: !this.state.scrolling
       });
     }
+  }
+
+  scaleMouseEnter(e, data) {
+    e.target.classList.add("is-hovered");
+  }
+
+  scaleMouseLeave(e, data) {
+    e.target.classList.remove("is-hovered");
+  }
+
+  handleScaleClick(e) {
+    let questions = this.state.questions;
+    let pointer = this.state.pointer;
+    let answer = e.target.getAttribute("data-answer");
+
+    questions[pointer][answer].answer = Number(e.target.innerHTML);
+
+    console.log(questions);
+
+    e.target.classList.add("selected");
+
+    this.setState({
+      questions: questions
+    });
   }
 
   nextQuestion() {
@@ -125,6 +156,10 @@ class App extends Component {
           handleScroll={this.handleScroll}
           pointer={this.state.pointer}
           questions={this.state.questions}
+          isHovered={this.state.isHovered}
+          scaleMouseEnter={this.scaleMouseEnter}
+          scaleMouseLeave={this.scaleMouseLeave}
+          handleScaleClick={this.handleScaleClick}
           nextQuestion={this.nextQuestion}
           backQuestion={this.backQuestion}
         />
