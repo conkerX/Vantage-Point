@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Questions = ({
   pointer,
@@ -91,7 +92,9 @@ const Questions = ({
         <div>
           {pointer !== 0 ? <button onClick={backQuestion}>Back</button> : null}
           {pointer === questions.length - 1 ? (
-            <button>Finish</button>
+            <Link to="/radar-chart">
+              <button>Finish</button>
+            </Link>
           ) : (
             <button onClick={nextQuestion}>Next</button>
           )}

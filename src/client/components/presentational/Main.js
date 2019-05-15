@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Home from "../container/Home";
 import Questions from "./Questions";
+import RadarChart from "./RadarChart";
 import About from "./About";
 
 const Main = props => {
@@ -31,6 +32,7 @@ const Main = props => {
             />
           )}
         />
+        <Route path="/radar-chart" component={RadarChart} />
         <Route path="/about" component={About} />
       </Switch>
     </div>
