@@ -11,7 +11,7 @@ export const data = {
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     },
     {
-      label: "Where currently I am",
+      label: "Where I currently am",
       backgroundColor: "rgba(47,79,79,0.2)",
       borderColor: "rgba(47,79,79,1)",
       pointBackgroundColor: "rgba(47,79,79,1)",
