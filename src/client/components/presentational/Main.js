@@ -10,13 +10,7 @@ const Main = props => {
   return (
     <div>
       <Switch>
-        <Route
-          exact
-          path="/"
-          render={routeProps => (
-            <Home {...routeProps} handleScroll={props.handleScroll} />
-          )}
-        />
+        <Route exact path="/" render={routeProps => <Home {...routeProps} />} />
         <Route
           path="/questions"
           render={routeProps => (
@@ -24,15 +18,26 @@ const Main = props => {
               {...routeProps}
               pointer={props.pointer}
               questions={props.questions}
+              handleScaleClick={props.handleScaleClick}
               scaleMouseEnter={props.scaleMouseEnter}
               scaleMouseLeave={props.scaleMouseLeave}
-              handleScaleClick={props.handleScaleClick}
               nextQuestion={props.nextQuestion}
               backQuestion={props.backQuestion}
+              calculateRadarChart={props.calculateRadarChart}
             />
           )}
         />
-        <Route path="/radar-chart" component={RadarChart} />
+        <Route
+          path="/radar-chart"
+          render={routeProps => (
+            <RadarChart
+              {...routeProps}
+              labels={props.labels}
+              data={props.data}
+              chartOptions={props.chartOptions}
+            />
+          )}
+        />
         <Route path="/about" component={About} />
       </Switch>
     </div>
@@ -40,3 +45,6 @@ const Main = props => {
 };
 
 export default Main;
+
+// <Home
+// handleScroll={props.handleScroll}
