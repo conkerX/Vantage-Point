@@ -45,6 +45,3 @@ const Main = props => {
 };
 
 export default Main;
-
-// <Home
-// handleScroll={props.handleScroll}

@@ -25,7 +25,6 @@ class App extends Component {
       chartOptions: chartOptions
     };
 
-    // this.handleScroll = this.handleScroll.bind(this);
     this.scaleMouseEnter = this.scaleMouseEnter.bind(this);
     this.scaleMouseLeave = this.scaleMouseLeave.bind(this);
     this.handleScaleClick = this.handleScaleClick.bind(this);
@@ -33,16 +32,6 @@ class App extends Component {
     this.backQuestion = this.backQuestion.bind(this);
     this.calculateRadarChart = this.calculateRadarChart.bind(this);
   }
-
-  // handleScroll(event) {
-  //   console.log("scroll -->", window.ScrollY);
-
-  //   if (window.scrollY) {
-  //     this.setState({
-  //       scrolling: !this.state.scrolling
-  //     });
-  //   }
-  // }
 
   scaleMouseEnter(e, data) {
     e.target.classList.add("is-hovered");
@@ -180,11 +169,3 @@ class App extends Component {
 }
 
 export default App;
-
-// <Header
-// handleScroll={this.handleScroll}
-// scrolling={this.state.scrolling}
-// />
-
-// <Main
-// handleScroll={this.handleScroll}
