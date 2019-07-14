@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ProgressBar from "./ProgressBar";
 
 const Questions = ({
   pointer,
@@ -23,7 +24,7 @@ const Questions = ({
 
         <div className="questions-answers-container">
           <div className="questions-state-container">
-            <p>Where I thought I was going to be</p>
+            <p>Past prospective</p>
             <div className="scale-container">
               {questions[pointer].whereIThoughtIWasGoingToBe.scale.map(num => (
                 <div
@@ -41,7 +42,7 @@ const Questions = ({
           </div>
 
           <div className="questions-state-container">
-            <p>Where I currently am</p>
+            <p>Current prospective</p>
             <div className="scale-container">
               {questions[pointer].whereIAm.scale.map(num => (
                 <div
@@ -59,7 +60,7 @@ const Questions = ({
           </div>
 
           <div className="questions-state-container">
-            <p>Where I am heading</p>
+            <p>Future prospective</p>
             <div className="scale-container">
               {questions[pointer].whereIThinkIAmGoing.scale.map(num => (
                 <div
@@ -76,6 +77,8 @@ const Questions = ({
             </div>
           </div>
         </div>
+
+        <ProgressBar percentage={pointer} />
 
         <div>
           {pointer !== 0 ? (

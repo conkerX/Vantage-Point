@@ -1,7 +1,7 @@
 export const data = {
   datasets: [
     {
-      label: "Where I thought I was going to be",
+      label: "Past prospective",
       backgroundColor: "rgba(179,181,198,0.2)",
       borderColor: "rgba(179,181,198,1)",
       pointBackgroundColor: "rgba(179,181,198,1)",
@@ -11,7 +11,7 @@ export const data = {
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     },
     {
-      label: "Where I currently am",
+      label: "Current prospective",
       backgroundColor: "rgba(47,79,79,0.2)",
       borderColor: "rgba(47,79,79,1)",
       pointBackgroundColor: "rgba(47,79,79,1)",
@@ -21,7 +21,7 @@ export const data = {
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     },
     {
-      label: "Where I am heading",
+      label: "Future prospective",
       backgroundColor: "rgba(218,165,32,0.2)",
       borderColor: "rgba(218,165,32,1)",
       pointBackgroundColor: "rgba(218,165,32,1)",
