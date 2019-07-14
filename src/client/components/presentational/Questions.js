@@ -20,6 +20,9 @@ const Questions = ({
           <p>
             <em>{questions[pointer].question}</em>
           </p>
+          <p className="questions-type">
+            <em>{questions[pointer].type}</em>
+          </p>
         </div>
 
         <div className="questions-answers-container">
