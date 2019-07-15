@@ -14,7 +14,8 @@ const Launch = () => {
         <p>We all have the power to take a step in the right direction.</p>
         <p>If you found this survey helpful, please share and help others!</p>
         <p>
-          If you have any questions about the survey, please email: me@gmail.com
+          If you have any questions about the survey, please email:
+          vantagepoint.creator@gmail.com
         </p>
         <Link style={{ "align-self": "center" }} to="/questions">
           <button className="start-button">Start</button>
