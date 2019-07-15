@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Website for a friend",
   "main": "index.js",
+  "engines": {
+    "node": "12.6.0"
+  },
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
