@@ -382,3 +382,7 @@
   border-radius: inherit;
   transition: width 0.2s ease-in;
 }
+
+html {
+  background: blue;
+}
