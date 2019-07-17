@@ -83,7 +83,7 @@ const Questions = ({
 
         <ProgressBar percentage={pointer} />
 
-        <div>
+        <div className="questions-button-container">
           {pointer !== 0 ? (
             <button className="questions-back-button" onClick={backQuestion}>
               Back
@@ -92,17 +92,14 @@ const Questions = ({
           {pointer === questions.length - 1 ? (
             <Link to="/radar-chart">
               <button
-                className="questions-next-finish-button"
+                className="questions-finish-button"
                 onClick={calculateRadarChart}
               >
                 Finish
               </button>
             </Link>
           ) : (
-            <button
-              className="questions-next-finish-button"
-              onClick={nextQuestion}
-            >
+            <button className="questions-next-button" onClick={nextQuestion}>
               Next
             </button>
           )}

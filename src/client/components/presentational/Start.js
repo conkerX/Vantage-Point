@@ -13,9 +13,11 @@ const Start = () => {
           awareness, and will. We all have the power to take control and take a
           step in the right direction. Take your step today!
         </p>
-        <Link to="/questions">
-          <button className="start-button">Step 1</button>
-        </Link>
+        <div className="start-button-container">
+          <Link to="/questions" className="start-button-a-tag">
+            <button className="start-button">Step 1</button>
+          </Link>
+        </div>
       </div>
     </div>
   );

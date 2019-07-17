@@ -17,9 +17,11 @@ const Launch = () => {
           If you have any questions about the survey, please email:
           vantagepoint.creator@gmail.com
         </p>
-        <Link style={{ "align-self": "center" }} to="/questions">
-          <button className="start-button">Start</button>
-        </Link>
+        <div className="start-button-container">
+          <Link style={{ width: "50%" }} to="/questions">
+            <button className="start-button">Start</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
