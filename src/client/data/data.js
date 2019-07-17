@@ -34,6 +34,9 @@ export const data = {
 };
 
 export const chartOptions = {
+  // maintainAspectRatio: true,
+  // responsive: true,
+  // aspectRation: 2,
   scale: {
     ticks: {
       beginAtZero: true,

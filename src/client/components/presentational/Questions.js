@@ -17,11 +17,11 @@ const Questions = ({
       <div className="questions-header-container">VANTAGE POINT</div>
       <div className="questions-question-container">
         <div className="questions-the-question-container">
-          <p>
-            <em>{questions[pointer].question}</em>
-          </p>
           <p className="questions-type">
             <em>{questions[pointer].type}</em>
+          </p>
+          <p>
+            <em>{questions[pointer].question}</em>
           </p>
         </div>
 
